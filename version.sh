@@ -1,1 +1,4 @@
 uname -a
+date
+cal 
+
