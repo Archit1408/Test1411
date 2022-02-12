@@ -1,2 +1,3 @@
 uname -a
 date
+cal
