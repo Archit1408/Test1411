@@ -1,3 +1,0 @@
-uname -a
-date
-cal
