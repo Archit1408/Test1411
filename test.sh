@@ -1,3 +1,3 @@
 name=archit
-echo $name
+echo $name > /tmp/file
 
