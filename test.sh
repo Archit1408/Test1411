@@ -1,3 +1,3 @@
 name=archit
-echo $name > /tmp/file
+echo $name > /home/jenkins/workspace/Tests/parameter/upstream/file.txt
 
