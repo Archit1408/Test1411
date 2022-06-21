@@ -1,3 +1,3 @@
-echo "I am a pipeline Job" > file.txt
+echo "I am a pipeline Job" 
 
 
