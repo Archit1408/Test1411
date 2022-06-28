@@ -9,7 +9,7 @@ pipeline {
 		stage('running'){
 			steps{
 				sh '''chmod +x ./test.sh
-                      		./test.sh'''
+                      		./test.sh >> inputfile'''
 			}
 		}
 		stage('Archiving'){
@@ -18,5 +18,10 @@ pipeline {
 			}
 		}
 			
+	}
+	post{
+		success{
+			sh "rm inputfile"
+		}
 	}
 }
