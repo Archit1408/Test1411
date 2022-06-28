@@ -19,11 +19,6 @@ pipeline {
 			}
 		}
 		stage('Archiving'){
-			when{
-				expression {
-					env.BRANCH_NAME == 'main'
-				}
-			}
 			steps{
 				input("Want to archive?")
 				script{
