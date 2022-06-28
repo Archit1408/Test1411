@@ -4,7 +4,7 @@ pipeline {
 		timestamps()
 	}
 	triggers{
-		cron ('H/1 * * * *')
+		pollSCM ('* * * * *')
 	}
 	stages{
 		stage('build'){
@@ -21,7 +21,7 @@ pipeline {
 		stage('Archiving'){
 			when{
 				expression {
-					env.BRANCH_NAME == 'dev'
+					env.BRANCH_NAME == 'main'
 				}
 			}
 			steps{
