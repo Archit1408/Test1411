@@ -25,6 +25,11 @@ pipeline {
 				}
 			}
 			steps{
+				input("Want to archive?")
+				script{
+					sh "echo archiving"
+				}
+				 
 				archiveArtifacts artifacts: 'inputfile', followSymlinks: false
 			}
 		}
