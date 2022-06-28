@@ -31,7 +31,7 @@ pipeline {
 			
 	}
 	post{
-		success{
+		changed{
 			sh "rm inputfile"
 		}
 	}
