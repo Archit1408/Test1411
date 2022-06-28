@@ -1,5 +1,11 @@
 pipeline {
 	agent any
+	options{
+		timestamps()
+	}
+	triggers{
+		cron ('H/1 * * * *')
+	}
 	stages{
 		stage('build'){
 			steps{
