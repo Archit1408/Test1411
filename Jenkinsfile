@@ -9,7 +9,12 @@ pipeline {
 		stage('running'){
 			steps{
 				sh '''chmod +x ./test.sh
-                      		./test.sh'''
+                      		./test.sh > file'''
+			}
+		}
+		stage('Archiving'){
+			steps{
+				archiveArtifacts artifacts: 'file', followSymlinks: false
 			}
 		}
 			
