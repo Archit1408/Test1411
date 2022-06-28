@@ -13,6 +13,11 @@ pipeline {
 			}
 		}
 		stage('Archiving'){
+			when{
+				expression {
+					BRANCH_NAME == 'dev'
+				}
+			}
 			steps{
 				archiveArtifacts artifacts: 'inputfile', followSymlinks: false
 			}
